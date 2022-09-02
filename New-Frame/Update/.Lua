@@ -1,132 +1,151 @@
--- Hacked!
+local Library = loadstring(game:HttpGet('https://raw.githubusercontent.com/VisualRoblox/Roblox/main/UI-Libraries/Visual%20UI%20Library/Source.lua'))()
 
-local ScreenGui = Instance.new("ScreenGui")
-local BedwarsHackFrame = Instance.new("Frame")
-local UICorner = Instance.new("UICorner")
-local Sape = Instance.new("TextButton")
-local UICorner_2 = Instance.new("UICorner")
-local Vape = Instance.new("TextButton")
-local UICorner_3 = Instance.new("UICorner")
-local EngoWare = Instance.new("TextButton")
-local UICorner_4 = Instance.new("UICorner")
-local ZylaConfig = Instance.new("TextButton")
-local UICorner_5 = Instance.new("UICorner")
-local RektSoon = Instance.new("TextButton")
-local UICorner_6 = Instance.new("UICorner")
-local TextLabel = Instance.new("TextLabel")
-local UICorner_7 = Instance.new("UICorner")
-local Close = Instance.new("TextButton")
-local UICorner_8 = Instance.new("UICorner")
+local Window = Library:CreateWindow('Hub Name', 'Game Name', 'Visual UI Library', 'rbxassetid://10618928818', false, 'VisualUIConfigs', 'Default')
 
---Properties:
+local Tab = Window:CreateTab('Tab', true, 'rbxassetid://3926305904', Vector2.new(524, 44), Vector2.new(36, 36))
 
-ScreenGui.Parent = game.CoreGui
+local Section = Tab:CreateSection('Section')
 
-BedwarsHackFrame.Name = "Bedwars Hack Frame"
-BedwarsHackFrame.Parent = ScreenGui
-BedwarsHackFrame.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
-BedwarsHackFrame.Position = UDim2.new(0.035830617, 0, 0.0236768983, 0)
-BedwarsHackFrame.Size = UDim2.new(0, 154, 0, 217)
-BedwarsHackFrame.Active = true
-BedwarsHackFrame.Draggable = true
+local Label = Section:CreateLabel('Label')
 
-UICorner.Parent = BedwarsHackFrame
+local Paragraph = Section:CreateParagraph('Paragraph', 'Content')
 
-Sape.Name = "Sape"
-Sape.Parent = BedwarsHackFrame
-Sape.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
-Sape.Position = UDim2.new(0.0714285672, 0, 0.147465438, 0)
-Sape.Size = UDim2.new(0, 131, 0, 26)
-Sape.Font = Enum.Font.SourceSans
-Sape.Text = "Sape (Ultra Best)"
-Sape.TextColor3 = Color3.fromRGB(255, 255, 255)
-Sape.TextSize = 14.000
-Sape.MouseButton1Down:Connect(function()
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/vodxn/sape/main/Initiate.lua"))()
+local Button = Section:CreateButton('Button', function()
+    print('Button Pressed')
 end)
 
-UICorner_2.Parent = Sape
-
-Vape.Name = "Vape"
-Vape.Parent = BedwarsHackFrame
-Vape.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
-Vape.Position = UDim2.new(0.0714285672, 0, 0.304147482, 0)
-Vape.Size = UDim2.new(0, 131, 0, 26)
-Vape.Font = Enum.Font.SourceSans
-Vape.Text = "Vape (Mega Best)"
-Vape.TextColor3 = Color3.fromRGB(255, 255, 255)
-Vape.TextSize = 14.000
-Vape.MouseButton1Down:Connect(function()
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/NewMainScript.lua", true))()
+local Slider = Section:CreateSlider('Slider', 1, 100, 50, Color3.fromRGB(0, 125, 255), function(Value)
+    print(Value)
 end)
 
-
-UICorner_3.Parent = Vape
-
-EngoWare.Name = "EngoWare"
-EngoWare.Parent = BedwarsHackFrame
-EngoWare.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
-EngoWare.Position = UDim2.new(0.0714285672, 0, 0.635944784, 0)
-EngoWare.Size = UDim2.new(0, 131, 0, 26)
-EngoWare.Font = Enum.Font.SourceSans
-EngoWare.Text = "EngoWare (Okay)"
-EngoWare.TextColor3 = Color3.fromRGB(255, 255, 255)
-EngoWare.TextSize = 14.000
-EngoWare.MouseButton1Down:Connect(function()
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/joeengo/engoware/main/Main.lua"))()
+local Textbox = Section:CreateTextbox('Textbox', 'Input', function(Value)
+    print(Value)
 end)
 
-UICorner_4.Parent = EngoWare
-
-ZylaConfig.Name = "Zyla Config"
-ZylaConfig.Parent = BedwarsHackFrame
-ZylaConfig.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
-ZylaConfig.Position = UDim2.new(0.0714285672, 0, 0.470046103, 0)
-ZylaConfig.Size = UDim2.new(0, 131, 0, 26)
-ZylaConfig.Font = Enum.Font.SourceSans
-ZylaConfig.Text = "Zyla Config (Best)"
-ZylaConfig.TextColor3 = Color3.fromRGB(255, 255, 255)
-ZylaConfig.TextSize = 14.000
-ZylaConfig.MouseButton1Down:Connect(function()
-	shared.VapePrivate = true
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/NewMainScript.lua", true))()
+local Keybind = Section:CreateKeybind('Keybind', 'F', function()
+    print('Key Pressed')
 end)
 
-UICorner_5.Parent = ZylaConfig
-
-RektSoon.Name = "Rekt (Soon)"
-RektSoon.Parent = BedwarsHackFrame
-RektSoon.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
-RektSoon.Position = UDim2.new(0.0714285672, 0, 0.806451678, 0)
-RektSoon.Size = UDim2.new(0, 131, 0, 26)
-RektSoon.Font = Enum.Font.SourceSans
-RektSoon.Text = "Rekt (Soon)"
-RektSoon.TextColor3 = Color3.fromRGB(255, 255, 255)
-RektSoon.TextSize = 14.000
-
-UICorner_6.Parent = RektSoon
-
-TextLabel.Parent = BedwarsHackFrame
-TextLabel.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
-TextLabel.Size = UDim2.new(0, 154, 0, 18)
-TextLabel.Font = Enum.Font.SourceSans
-TextLabel.Text = "BedWars"
-TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel.TextSize = 14.000
-
-UICorner_7.Parent = TextLabel
-
-Close.Name = "Close"
-Close.Parent = BedwarsHackFrame
-Close.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
-Close.Position = UDim2.new(0.805194795, 0, 0, 0)
-Close.Size = UDim2.new(0, 30, 0, 18)
-Close.Font = Enum.Font.SourceSans
-Close.Text = "X"
-Close.TextColor3 = Color3.fromRGB(255, 255, 255)
-Close.TextSize = 14.000
-Close.MouseButton1Down:Connect(function()
-	BedwarsHackFrame.Visible = false
+local Toggle = Section:CreateToggle('Toggle', true, Color3.fromRGB(0, 125, 255), 0.25, function(Value)
+    print(Value)
 end)
 
-UICorner_8.Parent = Close
+local Dropdown = Section:CreateDropdown('Dropdown', {'1', '2', '3', '4', '5'}, '1', 0.25, function(Value)
+    print(Value)
+end)
+
+local Colorpicker = Section:CreateColorpicker('Colorpicker', Color3.fromRGB(0, 125, 255), 0.25, function(Value)
+    print(Value)
+end)
+
+local Image = Section:CreateImage('Image', 'rbxassetid://10618928818', UDim2.new(0, 200, 0, 200))
+    
+local UpdateSection = Tab:CreateSection('Update Functions')
+
+local LabelBox = UpdateSection:CreateTextbox('Update Label', 'New Text', function(Value)
+    Label:UpdateLabel(Value, true)
+end)
+    
+local ParagraphBox = UpdateSection:CreateTextbox('Update Paragraph', 'New Text', function(Value)
+    Paragraph:UpdateParagraph('Paragraph', Value)
+end)
+    
+local UpdateDropdown1 = UpdateSection:CreateButton('Update Dropdown 1', function()
+    Dropdown:UpdateDropdown({'1', '2', '3'})
+end)
+    
+local UpdateDropdown2 = UpdateSection:CreateButton('Update Dropdown 2', function()
+    Dropdown:UpdateDropdown({'1', '2', '3', '4', '5', '6'})
+end)
+
+local UpdateImage = UpdateSection:CreateButton('Update Image', function()
+    Image:UpdateImage('rbxassetid://10580575081', UDim2.new(0, 200, 0, 200))
+end)
+
+local LibraryFunctions = Window:CreateTab('Library Functions', false, 'rbxassetid://3926305904', Vector2.new(524, 44), Vector2.new(36, 36))
+
+local UIFunctions = LibraryFunctions:CreateSection('UI Functions')
+
+local DestroyButton = UIFunctions:CreateButton('Destroy UI', function()
+    Library:DestroyUI()
+end)
+
+local ToggleKeybind = UIFunctions:CreateKeybind('Toggle UI', 'E', function()
+    Library:ToggleUI()
+end)
+
+local TextboxKeybind = UIFunctions:CreateTextbox('Notification', 'Text', function(Value)
+    Library:CreateNotification('Notification', Value, 5)
+end)
+
+local TransparencySlider = UIFunctions:CreateSlider('Transparency', 0, 100, 0, Color3.fromRGB(0, 125, 255), function(Value)
+    Library:SetTransparency(Value / 100, true)
+end)
+
+local TextPromptButton = UIFunctions:CreateButton('Create Text Prompt', function()
+    Library:CreatePrompt('Text', 'Prompt Title', 'Prompt Text', 'Alright')
+end)
+
+local OneButtonPromptButton = UIFunctions:CreateButton('Create One Button Prompt', function()
+    Library:CreatePrompt('OneButton', 'Prompt Title', 'Prompt Text', {
+        'Alright',
+        function()
+            print('Prompt Button Pressed')
+        end
+    })
+end)
+
+local TwoButtonPromptButton = UIFunctions:CreateButton('Create Two Button Prompt', function()
+    Library:CreatePrompt('TwoButton', 'Prompt Title', 'Prompt Text', {
+        'Button 1',
+        function()
+            print('Button 1')
+        end,
+        'Button 2',
+        function()
+            print('Button 2')
+        end
+    })
+end)
+
+local ConfigSection = LibraryFunctions:CreateSection('Config')
+
+local ConfigNameString = ''
+local ConfigName = ConfigSection:CreateTextbox('Config Name', 'Input', function(Value)
+    ConfigNameString = Value
+end)
+
+local SaveConfigButton = ConfigSection:CreateButton('Save Config', function()
+    Library:SaveConfig(ConfigNameString)
+end)
+
+local SelectedConfig = ''
+local ConfigsDropdown = ConfigSection:CreateDropdown('Configs', Library:GetConfigs(), nil, 0.25, function(Value)
+    SelectedConfig = Value
+end)
+
+local DeleteConfigButton = ConfigSection:CreateButton('Delete Config', function()
+    Library:DeleteConfig(SelectedConfig)
+end)
+
+local LoadConfigButton = ConfigSection:CreateButton('Load Config', function()
+    Library:LoadConfig(SelectedConfig)
+end)
+
+local RefreshConfigsButton = ConfigSection:CreateButton('Refresh', function()
+    ConfigsDropdown:UpdateDropdown(Library:GetConfigs())
+end)
+
+local ThemesSection = LibraryFunctions:CreateSection('Themes')
+
+local ThemesDropdown = ThemesSection:CreateDropdown('Themes', Library:GetThemes(), nil, 0.25, function(Value)
+    Library:ChangeTheme(Value)
+end)
+
+local ColorSection = LibraryFunctions:CreateSection('Custom Colors')
+
+for Index, CurrentColor in next, Library:ReturnTheme() do
+    ColorSection:CreateColorpicker(Index, CurrentColor, 0.25, function(Color)
+        Library:ChangeColor(Index, Color)
+    end, {true})
+end
